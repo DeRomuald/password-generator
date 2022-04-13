@@ -50,7 +50,19 @@ else{
   ("Your password will NOT have special characters.")
 }
 
-
+//Group characters
+if (hasLowercase) {
+  possibleCharacters= possibleCharacters.concat (lowercaseCharacters)
+}
+if (hasUppercase){
+  possibleCharacters= possibleCharacters.concat (uppercaseCharacters)
+}
+if (hasNumbers){
+  possibleCharacters= possibleCharacters.concat(numericCharacters) 
+}
+if (hasSpecial){
+  possibleCharacters= possibleCharacters.concat(specialCharacters)
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
