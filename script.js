@@ -5,7 +5,7 @@ function generatePassword (){
   var lowercaseCharacters= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   var specialCharacters= ['!','@','#','$','%','^','&','*','(',')','{','}','[',']','-','_','=','+',';',':','?','/','~']
 }
-
+//Input validation
 numberOfCharacters= prompt ("how many characters do you want in you password? Choose between 8-128 characters.");
 if (numberOfCharacters < 8 || numberOfCharacters > 128) {
   return "Please choose the correct number of characters.";
@@ -16,6 +16,39 @@ else{
   alert("Your password will be" + numberOfCharacters + "characters long.");
 }
 
+hasLowercase = confirm ("Do you want lowercase characters?");
+if (hasLowercase) {
+  var turnToLowercase = alert(" Your password will have lowercase characters.");
+}
+else{
+  alert("Your password will NOT have lowercase characters.")
+}
+
+
+
+hasUppercase = confirm ("Do you want uppercase characters?");
+if (hasUppercase){
+  alert("Your password will have uppercase characters.")
+}
+else{
+  alert("Your password will NOT have uppercase letters.")
+}
+
+hasNumbers = confirm ("Do you want to use numbers?");
+if (hasNumbers){
+  alert("Your password will have numbers");
+}
+else{
+  alert("Your password will NOT have numbers.")
+}
+
+hasSpecial= confirm ("Do you want special characters?")
+if (hasSpecial){
+  alert("Your passwrod will have special characters")
+}
+else{
+  ("Your password will NOT have special characters.")
+}
 
 
 // Get references to the #generate element
